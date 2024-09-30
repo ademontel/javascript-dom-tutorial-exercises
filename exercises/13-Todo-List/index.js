@@ -2,8 +2,8 @@
 //
 let spans = document.querySelectorAll("span");
 spans.forEach((span) => {
-    span.addEventListener("click", function(){
-        this.parentElement.remove();
+    span.addEventListener("click", function(evento){
+        evento.target.parentElement.remove();
     })
 })
 const toDoList = document.querySelector("#toDoList");
@@ -21,8 +21,8 @@ addtoDo.addEventListener("keypress", (e) =>{
         newElement.appendChild(textNode);
         toDoList.appendChild(newElement);
         addtoDo.value = "";
-        newSpan.addEventListener("click", function(){
-            this.parentElement.remove();
+        newSpan.addEventListener("click", function(evento){
+            evento.target.parentElement.remove();
         });     
       }
 })
